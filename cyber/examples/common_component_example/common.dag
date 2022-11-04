@@ -1,0 +1,16 @@
+# Define all coms in DAG streaming.
+    module_config {
+    module_library : "/media/lubin/1T/project/cyber_rt_standalone_r6.0.0/build/libcommon_component_example.so"
+    components {
+        class_name : "CommonComponentSample"
+        config {
+            name : "common"
+            readers {
+                channel: "/apollo/prediction"
+            }
+            readers {
+                channel: "/apollo/test"
+            }
+        }
+      }
+    }
